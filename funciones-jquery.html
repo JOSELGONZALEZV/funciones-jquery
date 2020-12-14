@@ -84,10 +84,8 @@
     color:rgb(15, 175, 238);
     font-size:80px
    }
-   #dropdownMenuLink{
-   
-   
-   font-size: 80px;}
+   .nav-link{   
+   font-size: 40px;}
 
 
 
@@ -148,13 +146,13 @@
 
 <ul class="nav flex-column" id="flex-column">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" href="#">HOVER</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">this</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">this</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -162,6 +160,12 @@
 </ul>
 
 
+
+
+<div><h3>===========================================</h3></div>
+<button type="button" id="pointerdos" class="btn fondoAmarillo"><h2>VAL</h2></button>
+<label for="fname" >NOMBRE:</label>
+<input type="text" id="fname" name="fname">
 
   <script>
 
@@ -171,11 +175,12 @@
 
   $(document).ready(function(){
    
-    $("#flex-column").hover(function(){
-      $("#flex-column").fadeOut();},
-      function(){
-      $("#flex-column").fadeIn();
-      });  
+    $("#pointerdos").on("click", function(){
+    $("#fname").val("Jose Luis Gonzalez");
+  });
+    $(".nav-link").hover(function(){
+      $(this).hide();
+    });
     
     $('.btn-primary').on('click', function(){
       $(".desarrollo").hide();
